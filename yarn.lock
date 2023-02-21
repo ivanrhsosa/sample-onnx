@@ -5037,19 +5037,19 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-onnxruntime-common@~1.13.0-dev.20221007-f4b944e1a:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/onnxruntime-common/-/onnxruntime-common-1.13.1.tgz#066942a76673e9b32c7dc380ae756b7d1448b331"
-  integrity sha512-HtfNeuZ8p47avtZR2mGldXA728keJj46w/6yy5DQTLA9zmpjXF/iJdS8f9yAtyWbSGw3s95DfBPWw2myhA1r0A==
+onnxruntime-common@~1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/onnxruntime-common/-/onnxruntime-common-1.14.0.tgz#2bb5dac5261269779aa5fb6536ca379657de8bf6"
+  integrity sha512-3LJpegM2iMNRX2wUmtYfeX/ytfOzNwAWKSq1HbRrKc9+uqG/FsEA0bbKZl1btQeZaXhC26l44NWpNUeXPII7Ew==
 
-onnxruntime-react-native@^1.14.0-dev.20221124-4ca62b9ee8:
-  version "1.14.0-dev.20221124-4ca62b9ee8"
-  resolved "https://registry.yarnpkg.com/onnxruntime-react-native/-/onnxruntime-react-native-1.14.0-dev.20221124-4ca62b9ee8.tgz#475e5c855b530f92d732c97436f1f38d599c6e5c"
-  integrity sha512-jrVi/q04R3YdWrqmkomu/yOOPnMe072U2ewgzz03vo2eGj/FI7TiXEqkJ1xwCk4cCt3EasZWCJwWKKM9ciOYgQ==
+onnxruntime-react-native@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/onnxruntime-react-native/-/onnxruntime-react-native-1.14.0.tgz#8ef35c02a90414338e6fc392f4cf5a8498fdaa90"
+  integrity sha512-hF0ZhJyOnUyV0rPWCAFmzPs/WHbv1msAJmYadRCQp3A4GcCgDHpHnopInskPnUPZU4NnH30lxcw3BhxtXGL17A==
   dependencies:
     "@expo/config-plugins" "^4.1.5"
     buffer "^6.0.3"
-    onnxruntime-common "~1.13.0-dev.20221007-f4b944e1a"
+    onnxruntime-common "~1.14.0"
 
 open@^6.2.0:
   version "6.4.0"

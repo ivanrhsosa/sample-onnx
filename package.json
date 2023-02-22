@@ -8,6 +8,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "big-integer": "^1.6.51",
     "expo": "~47.0.12",
     "expo-splash-screen": "~0.17.5",
     "expo-status-bar": "~1.4.2",

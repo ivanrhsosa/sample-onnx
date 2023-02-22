@@ -8,6 +8,14 @@ let myModel: ort.InferenceSession;
 
 async function loadModel() {
   try {
+    if (typeof BigInt64Array === 'undefined') {
+      global.BigInt64Array = require('big-integer')
+    }
+      
+
+    var bigInt64 = new BigInt64Array(2);
+    console.log('bigInt64: ', bigInt64); // 2
+
     const assets = await Asset.loadAsync(require('./assets/rf_iris.onnx'));
     const modelUri = assets[0].localUri;
     if (!modelUri) {
@@ -26,6 +34,9 @@ async function loadModel() {
 
 async function runModel() {
   try {
+    if (typeof BigInt64Array === 'undefined') {
+      global.BigInt64Array = require('big-integer')
+    }
     let inputData = Float32Array.from([5.5, 2.3, 4. , 1.3]);
     const feeds = {
       float_input: new ort.Tensor('float32', inputData, [1, 4]),

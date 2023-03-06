@@ -3,19 +3,12 @@ import { Alert, Button, StyleSheet, Text, View } from 'react-native';
 
 import * as ort from 'onnxruntime-react-native';
 import { Asset } from 'expo-asset';
+import React from 'react';
 
 let myModel: ort.InferenceSession;
 
 async function loadModel() {
   try {
-    if (typeof BigInt64Array === 'undefined') {
-      global.BigInt64Array = require('big-integer')
-    }
-      
-
-    var bigInt64 = new BigInt64Array(2);
-    console.log('bigInt64: ', bigInt64); // 2
-
     const assets = await Asset.loadAsync(require('./assets/rf_iris.onnx'));
     const modelUri = assets[0].localUri;
     if (!modelUri) {
@@ -38,10 +31,12 @@ async function runModel() {
       global.BigInt64Array = require('big-integer')
     }
     let inputData = Float32Array.from([5.5, 2.3, 4. , 1.3]);
+    //let inputData = Float32Array.from([-0.04910502, -0.04464164, -0.05686312, -0.04354219, -0.04559945, -0.04327577,  0.00077881, -0.03949338, -0.01190068,  0.01549073]);
+    //let inputData = Float32Array.from([1.,  20., 466.,   0.]);
     const feeds = {
       float_input: new ort.Tensor('float32', inputData, [1, 4]),
     }
-    console.log(feeds)
+    console.log('feeds before myModel.run(feeds): ',feeds)
     const fetches = await myModel.run(feeds);
     const output = fetches['probabilities'];
     if (!output) {
